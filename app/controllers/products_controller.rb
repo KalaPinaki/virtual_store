@@ -18,7 +18,7 @@ class ProductsController < ApplicationController
         # para comentar
     #   pp @product
         if @product.save 
-            redirect_to products_path, notice: 'Product created successfully!'
+            redirect_to products_path, notice: t('.created')
         else
             # status 422 cuando no guardo
             render :new, status: :unprocessable_entity
@@ -31,7 +31,7 @@ class ProductsController < ApplicationController
 
     def update
         if product.update(product_params) 
-            redirect_to products_path, notice: 'Product updated successfully!'
+            redirect_to products_path, notice: t('.updated')
         else
             render :edit, status: :unprocessable_entity
         end
@@ -41,7 +41,7 @@ class ProductsController < ApplicationController
         product.destroy
 
         #status see_other 303 producto que no existe, redirect a otro producto
-        redirect_to products_path, notice: 'Product deleted successfully!', status: :see_other
+        redirect_to products_path, notice: t('.destroyed'), status: :see_other
 
     end
 

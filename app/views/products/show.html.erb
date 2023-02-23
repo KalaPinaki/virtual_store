@@ -1,7 +1,7 @@
 
-<h1 class='title'> 
+<h2 class='title'> 
     <%= @product.title %>
-</h1>
+</h2>
 
 <%= image_tag @product.photo if @product.photo.attached? %>
 
@@ -14,9 +14,9 @@
 </span>
 
 <div>
-    <%= link_to "Editar Producto", edit_product_path(@product) %>
-    <%= link_to "Eliminar Producto", product_path(@product), data:{ 
+    <%= link_to t('.edit'), edit_product_path(@product) %>
+    <%= link_to t('.delete'), product_path(@product), data:{ 
         turbo_method: :delete,
-        turbo_confirm: '¿Estás seguro que deseas eliminar el producto?'
+        turbo_confirm: t('common.confirm')
         } %>
 </div>
