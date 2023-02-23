@@ -70,7 +70,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     test 'Does not allow to update a product with an invalid fields' do
         patch product_path(products(:switch)), params: {
             product:{
-                price: 45
+                price: nil
             }
         }
 
