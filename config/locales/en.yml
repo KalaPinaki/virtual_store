@@ -2,17 +2,23 @@ en:
   activerecord:
     models:
       product: Product
+      category: Category
+
     attributes:
       product:
         title: 'Title'
         description: 'Description'
         price: 'Price'
-        photo: 'Photo'  
+        photo: 'Photo'
+      category:
+        name: 'Name'  
   shared:
     header:
       add: 'Add product'
+      categories: 'Categories'
   common:
     confirm: 'Are you sure?'
+    back: 'Go Back'
   products:
     show:
       edit: 'Edit product'
@@ -29,3 +35,20 @@ en:
       updated: 'Your product has been successfully updated'
     destroy:
       destroyed: 'Your product has been successfully deleted'
+  categories:
+    category:
+      edit: 'Edit'
+      delete: 'Delete'
+    index:
+      title: 'Categories'
+      new: 'Add category'
+    edit:
+      title: 'Edit category'
+    create:
+      created: 'Your category has been successfully created'
+    update:
+      updated: 'Your category has been successfully updated'
+    destroy:
+      destroyed: 'Your category has been successfully destroyed'
+    new:
+      title: 'New category'

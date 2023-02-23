@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :categories, except: :show
+  resources :products, path: '/'
+
+end
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # Defines the root path route ("/")
   # root "articles#index"
@@ -20,6 +25,3 @@ Rails.application.routes.draw do
 #  get '/products/:id/edit', to: 'products#edit', as: :edit_product
 
 # resources hace lo mismo que la linea 14-20 en una sola linea
-resources :products, path: '/'
-
-end
